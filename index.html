@@ -1,0 +1,613 @@
+
+
+<html>
+ <head>
+  <title>News Website</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        .nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .news-item {
+            background-color: #fff;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 40px);
+            box-sizing: border-box;
+        }
+        .news-item img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .news-item h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .news-item p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .topics {
+            display: none;
+        }
+        .subcategories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .subcategory {
+            background-color: #fff;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .subcategory:hover {
+            background-color: #ddd;
+        }
+        .section-title {
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .loading {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.2em;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>News Website</h1>
+  </div>
+  <div class="nav">
+   <a href="#home">Home</a>
+   <a href="#freebies">Freebies</a>
+   <a href="#coupons">Coupons</a>
+   <a href="#deals">Deals</a>
+   <a href="#sweepstakes">Sweepstakes</a>
+   <a href="#giveaways">Giveaways</a>
+   <a href="#samples">Samples</a>
+   <a href="#contests">Contests</a>
+   <a href="#rebates">Rebates</a>
+   <a href="#discounts">Discounts</a>
+   <a href="#blog">Blog</a>
+  </div>
+  
+  <!-- Existing content (Freebies, Coupons, Deals, Sweepstakes, Giveaways, Samples) -->
+  
+  <div class="section-title">Contests</div>
+  <div class="subcategories">
+   <div class="subcategory">Photo Contests</div>
+   <div class="subcategory">Writing Contests</div>
+   <div class="subcategory">Video Contests</div>
+   <div class="subcategory">Art Contests</div>
+   <div class="subcategory">Skill-based Contests</div>
+  </div>
+  <div class="container" id="contests-container">
+   <div class="news-item">
+    <img alt="Photo contest image" height="400" src="https://example.com/photo-contest.jpg" width="600"/>
+    <h2>Capture the Moment: Photography Contest</h2>
+    <p>Show off your photography skills and win amazing prizes in our annual photo contest. This year's theme is "Urban Wildlife". Submit your best shots now!</p>
+   </div>
+   <div class="news-item">
+    <img alt="Writing contest image" height="400" src="https://example.com/writing-contest.jpg" width="600"/>
+    <h2>Short Story Writing Competition</h2>
+    <p>Calling all aspiring writers! Enter our short story contest for a chance to get published and win cash prizes. The theme is "A World Without Borders".</p>
+   </div>
+   <div class="news-item">
+    <img alt="Video contest image" height="400" src="https://example.com/video-contest.jpg" width="600"/>
+    <h2>60-Second Film Festival</h2>
+    <p>Create a compelling story in just 60 seconds! Our video contest is looking for creative short films on the topic of "Climate Change". Submit your entry now!</p>
+   </div>
+  </div>
+  
+  <div class="section-title">Rebates</div>
+  <div class="subcategories">
+   <div class="subcategory">Electronics Rebates</div>
+   <div class="subcategory">Appliance Rebates</div>
+   <div class="subcategory">Automotive Rebates</div>
+   <div class="subcategory">Home Improvement Rebates</div>
+   <div class="subcategory">Energy Efficiency Rebates</div>
+  </div>
+  <div class="container" id="rebates-container">
+   <div class="news-item">
+    <img alt="Electronics rebate image" height="400" src="https://example.com/electronics-rebate.jpg" width="600"/>
+    <h2>$50 Rebate on Smart Home Devices</h2>
+    <p>Upgrade your home with smart devices and get a $50 rebate on select products. Offer valid on purchases made before the end of the month.</p>
+   </div>
+   <div class="news-item">
+    <img alt="Appliance rebate image" height="400" src="https://example.com/appliance-rebate.jpg" width="600"/>
+    <h2>Energy Star Appliance Rebates</h2>
+    <p>Save money and energy! Get up to $100 back when you purchase Energy Star certified appliances. Check eligible models and submit your rebate form online.</p>
+   </div>
+   <div class="news-item">
+    <img alt="Automotive rebate image" height="400" src="https://example.com/auto-rebate.jpg" width="600"/>
+    <h2>Tire Rebate Program</h2>
+    <p>Get up to $80 back when you purchase a set of four qualifying tires. Don't miss this opportunity to save on your vehicle maintenance!</p>
+   </div>
+  </div>
+  
+  <div class="section-title">Discounts</div>
+  <div class="subcategories">
+   <div class="subcategory">Student Discounts</div>
+   <div class="subcategory">Senior Discounts</div>
+   <div class="subcategory">Military Discounts</div>
+   <div class="subcategory">Seasonal Discounts</div>
+   <div class="subcategory">Loyalty Program Discounts</div>
+  </div>
+  <div class="container" id="discounts-container">
+   <div class="news-item">
+    <img alt="Student discount image" height="400" src="https://example.com/student-discount.jpg" width="600"/>
+    <h2>20% Off for Students</h2>
+    <p>Calling all students! Get 20% off on all purchases when you verify your student status. Valid on both online and in-store purchases.</p>
+   </div>
+   <div class="news-item">
+    <img alt="Senior discount image" height="400" src="https://example.com/senior-discount.jpg" width="600"/>
+    <h2>Senior Citizen Discount Days</h2>
+    <p>Every Tuesday is Senior Discount Day! Shoppers aged 65 and above can enjoy 15% off on all items. Don't forget to bring your ID!</p>
+   </div>
+   <div class="news-item">
+    <img alt="Seasonal discount image" height="400" src="https://example.com/seasonal-discount.jpg" width="600"/>
+    <h2>End of Season Sale: Up to 70% Off</h2>
+    <p>Clear out your closet and make room for new styles! Shop our end of season sale with discounts up to 70% off on selected items.</p>
+   </div>
+  </div>
+  
+  <div class="section-title">Blog</div>
+  <div class="subcategories">
+   <div class="subcategory">Money-Saving Tips</div>
+   <div class="subcategory">Deal Hunting Strategies</div>
+   <div class="subcategory">Frugal Living</div>
+   <div class="subcategory">Consumer Rights</div>
+   <div class="subcategory">Product Reviews</div>
+  </div>
+  <div class="container" id="blog-container">
+   <div class="news-item">
+    <img alt="Money-saving tips image" height="400" src="https://example.com/money-saving-tips.jpg" width="600"/>
+    <h2>10 Easy Ways to Save Money on Groceries</h2>
+    <p>Discover simple yet effective strategies to reduce your grocery bill without compromising on quality. From meal planning to using cashback apps, we've got you covered!</p>
+   </div>
+   <div class="news-item">
+    <img alt="Deal hunting image" height="400" src="https://example.com/deal-hunting.jpg" width="600"/>
+    <h2>Mastering the Art of Black Friday Shopping</h2>
+    <p>Get ready for the biggest shopping event of the year! Learn insider tips and tricks to score the best deals during Black Friday and Cyber Monday.</p>
+   </div>
+   <div class="news-item">
+    <img alt="Product review image" height="400" src="https://example.com/product-review.jpg" width="600"/>
+    <h2>Top 5 Budget-Friendly Smartphones of 2023</h2>
+    <p>Looking for a new smartphone that won't break the bank? Check out our comprehensive review of the best budget-friendly options available this year.</p>
+   </div>
+  </div>
+ </body>
+</html>
+
+  <div class="section-title">
+   Freebies
+  </div>
+  <div class="subcategories">
+   <div class="subcategory">
+    Free Coffee
+   </div>
+   <div class="subcategory">
+    Skincare Samples
+   </div>
+   <div class="subcategory">
+    Movie Tickets
+   </div>
+   <div class="subcategory">
+    Perfume Samples
+   </div>
+   <div class="subcategory">
+    Organic Snacks
+   </div>
+  </div>
+  <div class="container" id="freebies-container">
+   <div class="news-item">
+    <img alt="A detailed description of the first freebies news image" height="400" src="https://storage.googleapis.com/a1aa/image/7GiXiVsUcCplP5AfS3x2Jy5zMrXb44Oea8N4eYUP3MmNe79OB.jpg" width="600"/>
+    <h2>
+     Freebie Alert: Enjoy a Free Coffee at Starbucks
+    </h2>
+    <p>
+     Treat yourself to a free coffee at Starbucks with this limited-time offer. Available at participating locations, this is a perfect way to start your day with a delicious cup of coffee.
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the second freebies news image" height="400" src="https://storage.googleapis.com/a1aa/image/9YrfIZD6SvXjXSxOWId9eJmOvIs6FeSzrPUveccue8so537dC.jpg" width="600"/>
+    <h2>
+     Get Your Free Sample of New Skincare Product
+    </h2>
+    <p>
+     Sign up now to receive a free sample of the latest skincare product from XYZ brand. Experience the benefits of this innovative formula and achieve glowing skin. Limited quantities available, so hurry!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the third freebies news image" height="400" src="https://storage.googleapis.com/a1aa/image/KlFicZXds4bSJNsxhZB8pKF6vIq6RTcmxByqEflMli1WfeeOB.jpg" width="600"/>
+    <h2>
+     Win Free Movie Tickets to the Latest Blockbuster
+    </h2>
+    <p>
+     Enter our giveaway for a chance to win free movie tickets to the latest blockbuster. Enjoy a night out at the movies with friends or family. Multiple winners will be selected, so don't miss out!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the fourth freebies news image" height="400" src="https://storage.googleapis.com/a1aa/image/nGJL8EYHN6ouLJVEf0smGB54iEj7LfiKRNVMdhMlZ4aFf9eOB.jpg" width="600"/>
+    <h2>
+     Free Sample of New Perfume: Sign Up Now
+    </h2>
+    <p>
+     Discover the enchanting fragrance of the latest perfume from XYZ brand. Sign up to receive a free sample and indulge in this luxurious scent. Limited quantities available, so act fast!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the fifth freebies news image" height="400" src="https://storage.googleapis.com/a1aa/image/reJsF1gbXZTrAKfQiQaKffaA8bSBnUgQOYQEmKFLu8lw879OB.jpg" width="600"/>
+    <h2>
+     Free Sample of Organic Snacks Delivered to Your Door
+    </h2>
+    <p>
+     Enjoy a healthy treat with a free sample of organic snacks. Sign up now to have these delicious snacks delivered right to your door. Limited quantities available, so don't wait!
+    </p>
+   </div>
+  </div>
+  <div class="section-title">
+   Coupons
+  </div>
+  <div class="subcategories">
+   <div class="subcategory">
+    Restaurant Coupons
+   </div>
+   <div class="subcategory">
+    Clothing Store Coupons
+   </div>
+   <div class="subcategory">
+    Electronics Coupons
+   </div>
+   <div class="subcategory">
+    Home Decor Coupons
+   </div>
+   <div class="subcategory">
+    Grocery Coupons
+   </div>
+  </div>
+  <div class="container" id="coupons-container">
+   <div class="news-item">
+    <img alt="A detailed description of the first coupons news image" height="400" src="https://storage.googleapis.com/a1aa/image/efbBchPg35k04k7jUgJMNdNhx3UjzxbafkALIXtQ71qQe79OB.jpg" width="600"/>
+    <h2>
+     50% Off Coupon for Your Favorite Restaurant
+    </h2>
+    <p>
+     Enjoy a delicious meal at your favorite restaurant with this 50% off coupon. Valid for dine-in and takeout, this offer is perfect for a night out or a cozy meal at home. Don't miss out on this fantastic deal!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the second coupons news image" height="400" src="https://storage.googleapis.com/a1aa/image/R0drvPdlir6BM9Ndf84C7lI3iAKwm3CuPZG0vdB3ea9Ef9eOB.jpg" width="600"/>
+    <h2>
+     Buy One Get One Free Coupon for Clothing Store
+    </h2>
+    <p>
+     Refresh your wardrobe with this buy one get one free coupon at XYZ Clothing Store. Shop the latest styles and enjoy great savings on select items. Limited time offer, so hurry!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the third coupons news image" height="400" src="https://storage.googleapis.com/a1aa/image/TMU7ZFri0xq5BNGe2Nvu6uamFMj1fFqmPv5aDTtaazZve9eOB.jpg" width="600"/>
+    <h2>
+     20% Off Coupon for Online Electronics Store
+    </h2>
+    <p>
+     Save 20% on your next purchase at ABC Electronics Store with this exclusive online coupon. Shop the latest gadgets and tech accessories at unbeatable prices. Limited time offer, so don't miss out!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the fourth coupons news image" height="400" src="https://storage.googleapis.com/a1aa/image/oIraSUJgfUSgNitdwHs1q1iGW5KpATxbEhJmSWNKvfVHf9eOB.jpg" width="600"/>
+    <h2>
+     30% Off Coupon for Home Decor
+    </h2>
+    <p>
+     Transform your living space with this 30% off coupon for home decor items. Shop at your favorite store and find beautiful pieces to enhance your home. Limited time offer, so start decorating today!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the fifth coupons news image" height="400" src="https://storage.googleapis.com/a1aa/image/jJRXnXzBwexWIyNYWGYbbclPOU9XfgXEonryzeUfS6JU779OB.jpg" width="600"/>
+    <h2>
+     15% Off Coupon for Grocery Shopping
+    </h2>
+    <p>
+     Save 15% on your next grocery shopping trip with this coupon. Stock up on your favorite items and enjoy great savings at participating stores. Limited time offer, so don't miss out!
+    </p>
+   </div>
+  </div>
+  <div class="section-title">
+   Deals
+  </div>
+  <div class="subcategories">
+   <div class="subcategory">
+    Electronics Deals
+   </div>
+   <div class="subcategory">
+    Home Appliances Deals
+   </div>
+   <div class="subcategory">
+    Grocery Deals
+   </div>
+   <div class="subcategory">
+    Fashion Deals
+   </div>
+   <div class="subcategory">
+    Gadgets Deals
+   </div>
+  </div>
+  <div class="container" id="deals-container">
+   <div class="news-item">
+    <img alt="A detailed description of the first deals news image" height="400" src="https://storage.googleapis.com/a1aa/image/0He4fEVERGtcBU6MZy66fwgDMeZm8k3eY8gvoDwWmdCU537dC.jpg" width="600"/>
+    <h2>
+     Flash Sale: Up to 70% Off on Electronics
+    </h2>
+    <p>
+     Don't miss this flash sale with up to 70% off on select electronics. Limited time offer, so grab your favorite gadgets at unbeatable prices!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the second deals news image" height="400" src="https://storage.googleapis.com/a1aa/image/OoKzt1EMNEKiAFJuDHh0ZeojxP79uxv525KDcjoQbq8fe9eOB.jpg" width="600"/>
+    <h2>
+     Daily Deal: Discounted Home Appliances
+    </h2>
+    <p>
+     Check out today's deal on home appliances with significant discounts. Available while supplies last, so don't miss out on these great savings!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the third deals news image" height="400" src="https://storage.googleapis.com/a1aa/image/Mu2UP3InyX4OPZIzD1UW0RculkXsEV0UE3gKyAGnx3irv37E.jpg" width="600"/>
+    <h2>
+     Special Offer: Buy 2 Get 1 Free on Groceries
+    </h2>
+    <p>
+     Take advantage of this special offer at your local grocery store. Buy 2 get 1 free on select items. Stock up on your essentials and save big!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the fourth deals news image" height="400" src="https://storage.googleapis.com/a1aa/image/CD7gm5bzv9Y7IdJYw2tYuHvofzVxLikaIYEqXUev6od7e9eOB.jpg" width="600"/>
+    <h2>
+     Weekend Sale: Up to 50% Off on Fashion
+    </h2>
+    <p>
+     Enjoy up to 50% off on fashion items during this weekend sale. Shop now and save big on the latest styles and trends!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the fifth deals news image" height="400" src="https://storage.googleapis.com/a1aa/image/LIfdr5cYVsSLXKFu0hODABhofnfj8OUfHjarQVLOsG6G879OB.jpg" width="600"/>
+    <h2>
+     Limited Time Offer: Discounted Gadgets
+    </h2>
+    <p>
+     Get the latest gadgets at discounted prices with this limited time offer. Hurry, while stocks last!
+    </p>
+   </div>
+  </div>
+  <div class="section-title">
+   Sweepstakes
+  </div>
+  <div class="subcategories">
+   <div class="subcategory">
+    Vacation Sweepstakes
+   </div>
+   <div class="subcategory">
+    Car Sweepstakes
+   </div>
+   <div class="subcategory">
+    Shopping Spree Sweepstakes
+   </div>
+   <div class="subcategory">
+    Home Makeover Sweepstakes
+   </div>
+   <div class="subcategory">
+    Free Groceries Sweepstakes
+   </div>
+  </div>
+  <div class="container" id="sweepstakes-container">
+   <div class="news-item">
+    <img alt="A detailed description of the first sweepstakes news image" height="400" src="https://storage.googleapis.com/a1aa/image/ysjMQ9D0YbpOBpu3XmZ44fzJrlrkNcfCxsii25az2U89e9eOB.jpg" width="600"/>
+    <h2>
+     Enter to Win a Free Vacation
+    </h2>
+    <p>
+     Enter this sweepstakes for a chance to win a free vacation to a tropical destination. No purchase necessary. Don't miss out on this amazing opportunity!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the second sweepstakes news image" height="400" src="https://storage.googleapis.com/a1aa/image/3LzegAmND01zHqK9vdGsJsG9Pg1Qc4eq6eZA7LV73pCw99eOB.jpg" width="600"/>
+    <h2>
+     Win a New Car in Our Sweepstakes
+    </h2>
+    <p>
+     Participate in our sweepstakes for a chance to win a brand new car. Multiple entries allowed. Don't miss your chance to drive away in a new vehicle!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the third sweepstakes news image" height="400" src="https://storage.googleapis.com/a1aa/image/17WMKB5SlRZ3PxmVwptjuduXeeX31odISw35ojCl4SCwe9eOB.jpg" width="600"/>
+    <h2>
+     Sweepstakes: Win a Shopping Spree
+    </h2>
+    <p>
+     Enter to win a shopping spree at your favorite mall. Several winners will be selected. Don't miss out on this exciting opportunity to shop till you drop!
+    </p>
+   </div>
+  </div>
+  <div class="section-title">
+   Giveaways
+  </div>
+  <div class="subcategories">
+   <div class="subcategory">
+    Gift Card Giveaways
+   </div>
+   <div class="subcategory">
+    Gadget Giveaways
+   </div>
+   <div class="subcategory">
+    Beauty Product Giveaways
+   </div>
+   <div class="subcategory">
+    Book Giveaways
+   </div>
+   <div class="subcategory">
+    Fitness Gear Giveaways
+   </div>
+  </div>
+  <div class="container" id="giveaways-container">
+   <div class="news-item">
+    <img alt="A detailed description of the first giveaways news image" height="400" src="https://storage.googleapis.com/a1aa/image/zzSqc5PT2GJkI9vxvT35DL0aV9kFdeca9rB914Zc7sdfe9eOB.jpg" width="600"/>
+    <h2>
+     Win a $100 Gift Card
+    </h2>
+    <p>
+     Enter our giveaway for a chance to win a $100 gift card to your favorite store. Multiple winners will be selected. Don't miss out on this fantastic opportunity!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the second giveaways news image" height="400" src="https://storage.googleapis.com/a1aa/image/kek2jGqNK3zFJyJ6Pcp8964yENilkfBv5ih17Q3tAQuye9eOB.jpg" width="600"/>
+    <h2>
+     Gadget Giveaway: Win the Latest Smartphone
+    </h2>
+    <p>
+     Participate in our gadget giveaway for a chance to win the latest smartphone. No purchase necessary. Enter now and stay connected with the newest technology!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the third giveaways news image" height="400" src="https://storage.googleapis.com/a1aa/image/oEFP76eNeXu2eonqZiMHrI5ZLazsf4Z2mFP2yFKnDX8a779OB.jpg" width="600"/>
+    <h2>
+     Beauty Product Giveaway: Win a Skincare Set
+    </h2>
+    <p>
+     Enter our beauty product giveaway for a chance to win a luxurious skincare set. Pamper yourself with high-quality products and achieve radiant skin. Don't miss out!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the fourth giveaways news image" height="400" src="https://storage.googleapis.com/a1aa/image/IDSwZWJYOP6aPlIfi0j9hFfFZiRMT4Wt1eJdVHIoSByj99eOB.jpg" width="600"/>
+    <h2>
+     Book Giveaway: Win a Bestselling Novel
+    </h2>
+    <p>
+     Enter our book giveaway for a chance to win a bestselling novel. Enjoy a captivating read and expand your library with this exciting giveaway. Enter now!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the fifth giveaways news image" height="400" src="https://storage.googleapis.com/a1aa/image/R9pCZgSrgloqF5nlpErtkeXQGk8z1iPFLoZKsCAGn8nhfeeOB.jpg" width="600"/>
+    <h2>
+     Fitness Gear Giveaway: Win a Set of Dumbbells
+    </h2>
+    <p>
+     Participate in our fitness gear giveaway for a chance to win a set of dumbbells. Stay fit and healthy with this essential workout equipment. Enter now and get moving!
+    </p>
+   </div>
+  </div>
+  <div class="section-title">
+   Samples
+  </div>
+  <div class="subcategories">
+   <div class="subcategory">
+    Beauty Samples
+   </div>
+   <div class="subcategory">
+    Food Samples
+   </div>
+   <div class="subcategory">
+    Health Samples
+   </div>
+   <div class="subcategory">
+    Pet Samples
+   </div>
+   <div class="subcategory">
+    Household Samples
+   </div>
+  </div>
+  <div class="container" id="samples-container">
+   <div class="news-item">
+    <img alt="A detailed description of the first samples news image" height="400" src="https://storage.googleapis.com/a1aa/image/DIYxyxAjFgb7PNydSHRMC2sUhd7wY1e6xrt5wxA02f00e9eOB.jpg" width="600"/>
+    <h2>
+     Free Beauty Samples: Try New Products
+    </h2>
+    <p>
+     Sign up to receive free beauty samples and try the latest products from top brands. Discover new favorites and enhance your beauty routine. Limited quantities available, so hurry!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the second samples news image" height="400" src="https://storage.googleapis.com/a1aa/image/vDxWYNf7GU1SZiX0toBBao6Ce3XiDSNLYeO8NajhaFRz99eOB.jpg" width="600"/>
+    <h2>
+     Free Food Samples: Taste the Best
+    </h2>
+    <p>
+     Get free food samples delivered to your door and taste the best products from top brands. Enjoy delicious treats and discover new favorites. Limited quantities available, so sign up now!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the third samples news image" height="400" src="https://storage.googleapis.com/a1aa/image/DrKi5fsODLSoSqyCXKbwXxXaF7qOkA7qHJoZz2PbDq8kfeeOB.jpg" width="600"/>
+    <h2>
+     Free Health Samples: Try New Supplements
+    </h2>
+    <p>
+     Receive free health samples and try new supplements to support your wellness journey. Discover effective products and enhance your health routine. Limited quantities available, so sign up now!
+    </p>
+   </div>
+   <div class="news-item">
+    <img alt="A detailed description of the fourth samples news image" height="400" src="https://storage.googleapis.com/a1aa/image/3vzwhNrjlf0BFKsDHxwhSPIwfiJyLrEgqhfz73FJ8DM499eOB.jpg" width="600"/>
+    <h2>
+     Free Pet Samples: Treat Your Furry Friend
+    </h2>
+    <p>
+     Sign up to receive free pet samples and treat your furry friend to the best products. Discover new favorites and keep your pet happy and healthy. Limited quantities available, so hurry!
+    </p>
+   </div>
+  </div>
+ </body>
+</html>
